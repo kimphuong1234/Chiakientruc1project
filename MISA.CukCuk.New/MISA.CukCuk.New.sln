@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MISA.CukCuk.Api", "MISA.CukCuk.Api\MISA.CukCuk.Api.csproj", "{3DFF4728-4754-4775-9106-9784E0103A22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3DFF4728-4754-4775-9106-9784E0103A22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DFF4728-4754-4775-9106-9784E0103A22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DFF4728-4754-4775-9106-9784E0103A22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DFF4728-4754-4775-9106-9784E0103A22}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7DC766D4-C0E3-4C03-B9D4-F37BDBF0FCCA}
+	EndGlobalSection
+EndGlobal
