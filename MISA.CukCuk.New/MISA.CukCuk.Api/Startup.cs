@@ -6,6 +6,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using MISA.ApplicationCore.Interface;
+using MISA.ApplicationCore.Services;
+using MISA.Infrastructure;
+using MISA.Infrastructure.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +31,11 @@ namespace MISA.CukCuk.Api
         {
 
             services.AddControllers();
+            services.AddCors();
+            services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
+            services.AddScoped(typeof(IBaseServices<>), typeof(BaseService<>));
+            services.AddScoped(typeof(IEmployeeRepository), typeof(EmployeeRepository));
+            services.AddScoped(typeof(IEmployeeService), typeof(EmployeeService));
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MISA.CukCuk.Api", Version = "v1" });

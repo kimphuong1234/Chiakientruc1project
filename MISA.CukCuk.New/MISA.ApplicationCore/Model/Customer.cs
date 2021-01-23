@@ -3,8 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MISA.CukCuk.Api.Model
+namespace MISA.Common.Model
 {
+    [AttributeUsage(AttributeTargets.Property)] //Gán cờ Atrribute cho các class, property, field
+    public class CheckRequired : Attribute //class kết thừa attribute
+    {
+        public string PropectyName { get; set; }
+        public string ErrorMessenger { get; set; }
+
+        public CheckRequired(string propertyName, string errorMsg = "") //class kết thừa attribute
+        {
+            PropectyName = propertyName;
+            
+        }
+
+    }
+
+
+    
     /// <summary>
     /// Class Khách hàng
     /// </summary>
@@ -28,6 +44,7 @@ namespace MISA.CukCuk.Api.Model
         /// <summary>
         /// Mã khách hàng
         /// </summary>
+        [CheckRequired("Mã khách hàng", "Mã khách hàng không thể để trống")] //Đánh dấu check trùng
         public string CustomerCode { get; set; }
         /// <summary>
         /// Họ tên
@@ -56,10 +73,12 @@ namespace MISA.CukCuk.Api.Model
         /// <summary>
         /// Số điện thoại
         /// </summary>
+        [CheckRequired("Số điện thoại", "Số điện thoại không thể để trống")]
         public string PhoneNumber { get; set; }
         /// <summary>
         /// Email
         /// </summary>
+        
         public string Email { get; set; } // string là chuỗi đặc biệt nên tự có định dạng trống ko cần thêm '?'
         /// <summary>
         /// Ngày sinh

@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MISA.CukCuk.Api.Model
+namespace MISA.Common.Model
 {
+
     /// <summary>
-    /// Class Nhóm Khách hàng
+    /// Class Vị trí
     /// </summary>
-    /// CreatedBy: ABC(11/01/2021)
-    public class CustomerGroup
+    /// CreatedBy: ABC(22/01/2021)
+    public class Department
     {
         //Khai báo các field ko có set get
         #region Declare
@@ -24,15 +25,31 @@ namespace MISA.CukCuk.Api.Model
         /// <summary>
         /// Khóa chính
         /// </summary>
-        public Guid CustomerGroupId { get; set; }
+        public Guid DepartmentId { get; set; }
         /// <summary>
-        /// Mã khách hàng
+        /// Tên vị trí
         /// </summary>
-        public string CustomerGroupName { get; set; }
+        public Guid DepartmentName { get; set; }
         /// <summary>
-        /// Họ tên
+        /// miêu tả
         /// </summary>
         public string Description { get; set; }
+        /// <summary>
+        /// Ngày tạo
+        /// </summary>
+        public DateTime? CreatedDate { get; set; }
+        /// <summary>
+        /// Tạo bởi
+        /// </summary>
+        public string CreatedBy { get; set; }
+        /// <summary>
+        /// Ngày sửa
+        /// </summary>
+        public DateTime? ModifiedDate { get; set; }
+        /// <summary>
+        /// Sửa bởi
+        /// </summary>
+        public string ModifiedBy { get; set; }
         #endregion
         //Tất cả các phương thức
         #region Method
@@ -41,3 +58,4 @@ namespace MISA.CukCuk.Api.Model
 
     }
 }
+

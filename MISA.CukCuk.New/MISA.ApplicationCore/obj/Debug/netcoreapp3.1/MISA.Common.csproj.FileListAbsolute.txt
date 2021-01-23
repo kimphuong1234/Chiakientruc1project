@@ -1,0 +1,9 @@
+C:\Users\dkphuong\source\repos\Chiakientruc1project\MISA.CukCuk.New\MISA.Common\bin\Debug\netcoreapp3.1\MISA.Common.deps.json
+C:\Users\dkphuong\source\repos\Chiakientruc1project\MISA.CukCuk.New\MISA.Common\bin\Debug\netcoreapp3.1\MISA.Common.dll
+C:\Users\dkphuong\source\repos\Chiakientruc1project\MISA.CukCuk.New\MISA.Common\bin\Debug\netcoreapp3.1\MISA.Common.pdb
+C:\Users\dkphuong\source\repos\Chiakientruc1project\MISA.CukCuk.New\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.csprojAssemblyReference.cache
+C:\Users\dkphuong\source\repos\Chiakientruc1project\MISA.CukCuk.New\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.AssemblyInfoInputs.cache
+C:\Users\dkphuong\source\repos\Chiakientruc1project\MISA.CukCuk.New\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.AssemblyInfo.cs
+C:\Users\dkphuong\source\repos\Chiakientruc1project\MISA.CukCuk.New\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.csproj.CoreCompileInputs.cache
+C:\Users\dkphuong\source\repos\Chiakientruc1project\MISA.CukCuk.New\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.dll
+C:\Users\dkphuong\source\repos\Chiakientruc1project\MISA.CukCuk.New\MISA.Common\obj\Debug\netcoreapp3.1\MISA.Common.pdb

@@ -1,41 +1,54 @@
-﻿using Dapper;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using MISA.CukCuk.Api.Model;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
+using Dapper;
+using Microsoft.Extensions.Configuration;
+using MISA.ApplicationCore.Interface;
+using MISA.Infrastructure;
+using MISA.Infrastructure.Base;
+using MISA.ApplicationCore.Services;
 
 namespace MISA.CukCuk.Api.Api
 {
-    [Route("api/v1/[Controller]")]
-    [ApiController]
-    public abstract class EntityController<MISAEntity> : ControllerBase
-    {
-        DbConnector dbConnector = new DbConnector();
-        [HttpGet]
-        public IEnumerable<MISAEntity> Get()
-        {
-            var customers = dbConnector.Get<MISAEntity>();
-            return customers;
-        }
-        [HttpGet("{id}")]
-        public IActionResult Get(string id)
-        {
-            var customer = dbConnector.GetById<MISAEntity>(id);
-            //Trả dữ liệu cho Client:
-            return Ok(customer);
-        }
+    [Route("api/v1/[controller]")]
 
-        [HttpDelete("{id}")]
-        public IActionResult Delete(string id)
+    [ApiController]
+    public class EntityController<MISAEntity> : ControllerBase
+    {
+        IBaseServices<MISAEntity> _baseServices;
+        public EntityController(IBaseServices<MISAEntity> baseServices)
         {
-            var result = dbConnector.Delete<MISAEntity>(id);
-            return Ok(result);
+            _baseServices = baseServices;
+        }
+        [HttpGet]
+        public IActionResult Get()
+        {
+            return Ok(_baseServices.GET());
+        }
+        [HttpGet("id")]
+        public IActionResult GetById(string id)
+        {
+            return Ok(_baseServices.GetById(id));
+        }
+        [HttpPost]
+        public IActionResult Insert([FromBody] MISAEntity entity)
+        {
+            return Ok(_baseServices.Add(entity));
+        }
+        [HttpPut]
+        public IActionResult Update(MISAEntity entity)
+        {
+            return Ok(_baseServices.Update(entity));
+        }
+        [HttpDelete]
+        public IActionResult Delete(Guid id)
+        {
+            return Ok(_baseServices.Delete(id));
         }
     }
 }
-
